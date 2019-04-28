@@ -87,15 +87,20 @@ void portal(){
              factor = (float(x) - (float(px) - float(size)))/100;
           
         }else if(dir==2){
-             
+             factor = ((float(px) + float(size)) - float(x))/100;
         }
       
       
     }else if(in_portal){
-        for(i=0;i<3;i++){
-            colors_y[i] = colors_y[i] + int(apart*factor); 
-        }
-        factor = 0;
+      
+        
+            for(i=0;i<3;i++){
+                colors_y[i] = colors_y[i] + int(apart*factor); 
+            }
+            factor = 0;
+          
+        
+        
         in_portal = false;
     }
 }
